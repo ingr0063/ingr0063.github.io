@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Included is the style. In the submission area, it didn't say that there should be a folder section for css, so I put everything in <style> -->
+	<!-- Included is the style. In the submission area, it didn't say that there should be a folder section for css, so I put everything in <style> 
+	
+	table, th and td needed formatting so the table looked the same
+	table.centre is to make sure the text is not aligned to the left as it's defaulted too
+	body needed some formatting because it appeared the example had some padding on the left, I don't know exactly how much
+	-->
 	<style>
 		table, th, td{border: 1px solid black;}
 		table.center{text-align: center; vertical-align: middle;}
@@ -13,6 +18,7 @@
 <body>
 	<h1>Assignment 2</h1>
 	<h2>Employee List</h2>
+	<!-- Mkaing use of the class described in the <style> -->
 	<table class="center">
 		<tr>
 			<th>Id</th>
@@ -44,10 +50,12 @@
 			<td>Rob</td>
 			<td>rob@fakemail.com</td>
 		</tr>
+		<!-- the colspan is for the last entry in the table, making sure it spans all columns -->
 		<tr>
 			<td colspan="3">All of the above are Division Heads</td>
 		</tr>
 	</table>
+	<!-- I tried to toy with getting all the images under one style, but after some failed attempts, left it as it is, with each image getting their own formatting. I left the section class="animals" to remember that I tried to and failed, although I know it's useless because there is no animals class referenced in <style> -->
 	<section class="animals">
 		<h2>Animals</h2>
 		<figure>
@@ -89,13 +97,13 @@
 			<dd>- white cold drink</dd>
 		</dl>
 		<p> <abbr title="Hypertext Markup Language">HTML</abbr></p>
+		<!-- This one is a little weird, I couldn't recognize what the little dots under CSS were, they didn't look like the dots under HTML, so I used abbr even though I feel like that's not what should have been used. -->
 		<p> <abbr title="Cascading Style Sheets">CSS</abbr></p>
 		<details>
 			<summary>What is a mobile phone?</summary>
 			<p>A mobile phone, cell phone or hand phone, sometimes shortened to simply mobile, cell, or just phone, is a portable telephone that can make and recieve calls over a radio frequency link while the use is moving within a telephone service area.</p>
 		</details>
 		<h2>Hidden comment:</h2>
-		<!-- This is a hidden comment and contains the QA questions for Assignment 2  -->
-	</section>
-	
+		<!-- This is a hidden comment, although there are a ton of already included comments in the code above  -->
+	</section>	
 </body>
