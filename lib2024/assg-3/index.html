@@ -9,35 +9,44 @@
 	<div id="wrapper" class="wrapper">
 		<section id="html_forms" class="main_section">
 			<h2>Forms</h2>
+			<!-- This is the start of the forms. It creates the formpage.php to store the form information -->
 			<form action="formpage.php" method="get">
+				<!-- First container for the first name. I chose to name all the id's text_con for the text container. It's like this for all of the form parts -->
 				<div id="firstname_con" class="form_elm">
 					<label for="FirstName">First name:</label>
 					<input type="text" name="FirstName" id="FirstName" placeholder="This is the First Name">
 				</div>
+				<!-- This is the text field for Last Name -->
 				<div id="lastname_con" class="form_elm">
 					<label for="LastName">Last name:</label>
 					<input type="text" name="LastName" id="LastName" placeholder="This is the Last Name">
 				</div>
+				<!-- Text Field for email -->
 				<div id="email_con" class="form_elm">
 					<label for="email">Email:</label>
 					<input type="email" name="email" id="email" value="e.mai@l.com" readonly="">
 				</div>
+				<!-- Password field for password -->
 				<div id="password_con" class="form_elm">
 					<label for="pass">Password:</label>
 					<input type="password" name="pass" id="pass" required>
 				</div>
+				<!-- Text field for introductory text -->
 				<div id="introtext_con" class="form_elm">
 					<label for="introtext">Introductory Text:</label>
 					<textarea name="introtext" id="introtext" placeholder="Enter your own introdcutory text">Intro text example: </textarea>
 				</div>
+				<!-- Date field for the date -->
 				<div id="date_con" class="form_elm">
 					<label for="date">Date of Birth:</label>
 					<input type="date" name="date" id="date">
 				</div>
+				<!-- tel field for phone -->
 				<div id="phone_con" class="form_elm">
 					<label for="phone">Mobile Number:</label>
 					<input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
 				</div>
+				<!-- three radios for male, female and other respectively -->
 				<div id="gender_con" class="form_elm">
 					<label>Gender:</label>
 					<input type="radio" id="male" name="gender" value="male">
@@ -47,30 +56,36 @@
 					<input type="radio" id="other" name="gender" value="other">
 					<label for="other">Other</label>
 				</div>
+				<!--  -->
 				<div id="address_con" class="form_elm">
 					<label for="address">Address:</label>
 					<input type="text" name="address" id="address" placeholder="Placeholder address text">
 				</div>
+				<!--  -->
 				<div id="city_con" class="form_elm">
 					<label for="city">City:</label>
 					<input type="text" name="city" id="city">
 				</div>
+				<!--  -->
 				<div id="province_con" class="form_elm">
 					<label for="province">Province:</label>
 					<select name="province" id="province">
 						<option value="ontario">Ontario</option>
 					</select>
 				</div>
+				<!--  -->
 				<div id="country_con" class="form_elm">
 					<label for="country">Country:</label>
 					<select name="country" id="country">
 						<option value="Canada">Canada</option>
 					</select>
 				</div>
+				<!--  -->
 				<div id="postalcode_con" class="form_elm">
 					<label for="postalcode">Postal Code:</label>
 					<input type="text" name="postalcode" id="postalcode">
 				</div>
+				<!--  -->
 				<div id="hobbies_con" class="form_elm">
 					<label>Hobbies/Interests:</label><br>
 					<label for="d&d">D&D</label>
@@ -80,10 +95,12 @@
 					<label for="lor">Legends of Runeterra</label>
 					<input type="checkbox" name="lor" id="lor" value="lor">
 				</div>
-				<div >
+				<!--  -->
+				<div id="url_con" class="form_elm">
 					<label for="ur">Enter a URL:</label>
 					<input type="url" name="ur" id="ur">
 				</div>
+				<!--  -->
 				<button type="submit">Submit</button>
 				<button type="reset">Reset</button>
 			</form>
