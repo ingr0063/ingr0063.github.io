@@ -2,7 +2,12 @@
 <html lang="en-ca">
 <head>
 	<title>Final</title>
+	<meta charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+	<script src="js/scripts.js">
+		
+	</script>
 </head>
 <body>
 	<header class="clearfix">
@@ -18,8 +23,9 @@
 		</nav>
 	</header>
 	<main class="clearfix">
-		<h2>About</h2>
+		
 		<article class="main_content">
+			<h2>About</h2>
 			<img src="img/bridge.jpg" alt="Bridge over river">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed sem dignissim, condimentum lacus non, consectetur dolor. Quisque feugiat mi id faucibus dignissim. Vivamus bibendum metus scelerisque porta faucibus. Phasellus ac magna id sem facilisis blandit. Cras at enim eget ipsum dapibus fermentum. Sed et nibh nunc. Donec tempus leo vitae quam rhoncus egestas. Nulla vel sodales mi. Nam et vestibulum ligula. Vestibulum justo diam, placerat quis velit id, scelerisque mattis nibh. Nunc sed egestas massa.</p>
 			<p>Vestibulum laoreet pulvinar tincidunt. Integer id rhoncus velit, ac eleifend lectus. Maecenas in nunc dapibus, tempor ex at, molestie ligula. Quisque at mollis velit. Integer posuere mauris eget sapien efficitur, non volutpat quam facilisis. Donec lacinia mauris at cursus bibendum. Etiam at blandit metus, at placerat purus. Vivamus tempus nibh justo. Proin non sem ipsum. Integer at ligula ante. Sed convallis nulla eu varius egestas. Donec accumsan posuere interdum. Integer porta auctor est, nec tempus urna pretium non.</p>
@@ -74,17 +80,22 @@
 		</table>
 		<aside class="e_profile">
 			<h2>Edit Profile</h2>
-			<form>
+			<form name="f_profile" class="ep_profile" action="action_page.php" method="GET" onsubmit="updateProfile()">
 				<label for="p_name">Name: </label>
-				<input type="text" id="p_name" name="p_name"><br>
+				<input type="text" id="p_name" name="p_name" placeholder="Firstname Lastname" required><br>
+				
 				<label for="p_email">Email: </label>
-				<input type="text" id="p_email" name="p_email"><br>
+				<input type="email" id="p_email" name="p_email" pattern="[a-z0-.9_%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="name@email.com" required><br>
+				
 				<label for="p_address">Address: </label>
-				<input type="text" id="p_address" name="p_address"><br>
+				<input type="text" id="p_address" name="p_address" placeholder="123 abc St." required><br>
+				
 				<label for="p_city">City: </label>
-				<input type="text" id="p_city" name="p_city"><br>
+				<input type="text" id="p_city" name="p_city" placeholder="Cityname" required><br>
+				
 				<label for="p_prov">Province: </label>
-				<select id="p_prov" name="p_prov">
+				<select id="p_prov" name="p_prov" required>
+					<option value="" disabled selected>Select Province</option>
 					<option value="AB">Alberta</option>
 					<option value="BC">British Columbia</option>
 					<option value="MB">Manitoba</option>
@@ -93,21 +104,35 @@
 					<option value="NT">Northwest Territories</option>
 					<option value="NS">Nova Scotia</option>
 					<option value="NV">Nuavut</option>
-					<option value="ON" selected>Ontario</option>
+					<option value="ON">Ontario</option>
 					<option value="PE">Prince Edward Island</option>
 					<option value="QC">Quebec</option>
 					<option value="SK">Saskatchewan</option>
 					<option value="YT">Yukon</option>
-				</select>
+				</select><br>
+				<label for="p_postal">Postal Code: </label>
+				<!-- The Postal Code Pattern needs a space inside or it won't work. It may be annoying for inputting, but Postal codes have spaces. -->
+				<input type="text" id="p_postal" name="p_postal" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" placeholder="A1A 1A1" required><br>
+				<input class="submit_btn" type="submit" name="Submit">
 			</form>
 		</aside>
 		<aside class="i_profile">
 			<h2>Profile Info</h2>
+			<div class="profile_div">
+				<img src="img/profile.png" alt="generic profile image" class="profile_img">
+				<h3 id="i_name">John Doe</h3>
+				<p id="i_email">JohnDoe@college.com</p>
+				<p id="i_address">123 abc, def</p>
+				<p id="i_city">city</p>
+				<p id="i_province">Prov</p>
+				<p id="i_postal">Postal</p>
+				<img src="img/mail.jpg" alt="mail" class="mail">
+			</div>
 		</aside>
 	</main>
 	<footer class="clearfix">
 		<div class="quicklinks">
-			<h3>Quick Links</h3>
+			<h4>Quick Links</h4>
 			<ul>
 				<li><a href="/About/" class="nav_element">About</a></li>
 				<li><a href="/Schedule/" class="nav_element">Schedule</a></li>
@@ -116,13 +141,13 @@
 			</ul>
 		</div>
 		<div class="social">
-			<h3>Follow Us</h3>
-			<a href=""><img src=""></a>
-			<a href=""><img src=""></a>
-			<a href=""><img src=""></a>
+			<h4>Follow Us</h4>
+			<a href="https://www.facebook.com/"><img src="img/facebook.png" class="social-img" alt="facebook logo"></a>
+			<a href="https://www.youtube.com/"><img src="img/youtube.png" class="social-img" alt="youtube logo"></a>
+			<a href="https://www.twitter.com/"><img src="img/twitter.png" class="social-img" alt="twitter logo"></a>
 		</div>
 		<div class="address">
-			<h3>Address</h3>
+			<h4>Address</h4>
 			<p>Address numbers and such</p>
 		</div>
 	</footer>
